@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100px"
+        android:layout_marginRight="100px"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="仿支付宝首页"
+            />
+        <Button
+            android:id="@+id/normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="普通"
+            android:layout_marginTop="50px"
+        />
+        <Button
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="带标题栏悬浮置顶"
+            android:layout_marginTop="50px"
+            />
+        <Button
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TabLayout标题置顶"
+            android:layout_marginTop="50px"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>

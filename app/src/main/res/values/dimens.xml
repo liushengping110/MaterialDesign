@@ -1,0 +1,4 @@
+<resources>
+    <!--ToolBarScrollBehavior-->
+    <dimen name="actionbar_size_offset">56dp</dimen>
+</resources>
