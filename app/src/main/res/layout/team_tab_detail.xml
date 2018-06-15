@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_detail"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <!--1-->
+    <RelativeLayout
+        android:id="@+id/tab1_mian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tab1_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10px"
+            android:text="消息"
+            android:textColor="#59c2de"
+            android:textSize="46px" />
+
+        <TextView
+            android:id="@+id/tab1_v"
+            android:layout_width="match_parent"
+            android:layout_height="8px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/team_detail_tab" />
+
+    </RelativeLayout>
+
+    <!--2-->
+    <RelativeLayout
+        android:id="@+id/tab2_mian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tab2_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10px"
+            android:text="关注"
+            android:textColor="#333333"
+            android:textSize="46px" />
+
+        <TextView
+            android:id="@+id/tab2_v"
+            android:layout_width="match_parent"
+            android:layout_height="8px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/team_detail_tab" />
+    </RelativeLayout>
+
+    <!--3-->
+    <RelativeLayout
+        android:id="@+id/tab3_mian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tab3_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10px"
+            android:text="收藏"
+            android:textColor="#333333"
+            android:textSize="46px" />
+
+        <TextView
+            android:id="@+id/tab3_v"
+            android:layout_width="match_parent"
+            android:layout_height="8px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/team_detail_tab" />
+
+    </RelativeLayout>
+</LinearLayout>

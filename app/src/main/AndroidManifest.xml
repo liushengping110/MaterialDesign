@@ -19,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activityscrollViewtop.ActivityToTop"/>
         <activity android:name=".alipay.AlipayActivity"/>
         <activity android:name=".nomal.NomalActivity"/>
         <activity android:name=".title.TitleActivity"/>

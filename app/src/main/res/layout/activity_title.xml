@@ -21,71 +21,61 @@
                 android:layout_height="wrap_content"
                 app:contentScrim="@color/red"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
-                <RelativeLayout
-                    android:id="@+id/lin_all"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="500px"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_collapseParallaxMultiplier="0.6"
                     >
                     <ImageView
                         android:id="@+id/img_s_logo"
                         android:layout_width="match_parent"
-                        android:layout_height="500px"
+                        android:layout_height="230dp"
                         android:layout_gravity="center"
                         android:visibility="visible"
                         android:scaleType="centerCrop"
                         android:src="@drawable/two"
                         />
-                </RelativeLayout>
-            </android.support.design.widget.CollapsingToolbarLayout>
-            <TextView
-                android:id="@+id/text_test"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_alignParentTop="true"
-                android:gravity="center"
-                android:visibility="gone"
-                android:text="此处需要占位，如果不占位，标题栏会被推上去，被红色状态栏覆盖"
-                />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:id="@+id/lin_tool_title"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_alignParentBottom="true"
-                    android:layout_height="45dp"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:layout_height="45dp">
-                    <LinearLayout
-                        android:id="@+id/lin_text"
-                        android:layout_width="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:orientation="horizontal">
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/lin_line"
-                        android:layout_width="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerInParent="true"
-                        android:layout_height="1dp"
-                        android:orientation="horizontal">
-                    </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/huise"/>
-                </RelativeLayout>
 
-            </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:id="@+id/lin_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/lin_line"
+                                    android:layout_width="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_height="1dp"
+                                    android:orientation="horizontal">
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                </LinearLayout>
+                <!--<android.support.v7.widget.Toolbar-->
+                <wizrole.materialdesign.title.CustTooleBar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+                </wizrole.materialdesign.title.CustTooleBar>
+            </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
@@ -93,115 +83,5 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             />
-
     </android.support.design.widget.CoordinatorLayout>
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/red"
-        android:alpha="255"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:id="@+id/lin_after"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="200px"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:id="@+id/img_left_after"
-                        android:layout_width="45dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="left"
-                        android:src="@drawable/turn_left_after"
-                        android:padding="10px"
-                        />
-                </LinearLayout>
-                <TextView
-                    android:id="@+id/text_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="50px"
-                    android:gravity="center"
-                    />
-                <ImageView
-                    android:id="@+id/img_home_after"
-                    android:layout_width="100px"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10px"
-                    android:layout_gravity="center"
-                    android:src="@drawable/turn_home_after"
-                    android:padding="10px"
-                    />
-                <ImageView
-                    android:id="@+id/img_share_after"
-                    android:layout_width="100px"
-                    android:layout_gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10px"
-                    android:src="@drawable/turn_share_after"
-                    android:padding="10px"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/lin_befor"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/transparent"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="200px"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:id="@+id/img_left_befor"
-                        android:layout_width="100px"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="left"
-                        android:src="@drawable/turn_left_befor"
-                        android:padding="10px"
-                        />
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text=""
-                    android:gravity="center"
-                    />
-                <ImageView
-                    android:id="@+id/img_home_befor"
-                    android:layout_width="100px"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10px"
-                    android:src="@drawable/turn_home_befor"
-                    android:padding="10px"
-                    android:layout_gravity="center"
-                    />
-                <ImageView
-                    android:id="@+id/img_share_befor"
-                    android:layout_width="100px"
-                    android:layout_gravity="center"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10px"
-                    android:src="@drawable/turn_share_befor"
-                    android:padding="10px"
-                    />
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
 </RelativeLayout>

@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import wizrole.materialdesign.activityscrollViewtop.ActivityToTop;
 import wizrole.materialdesign.alipay.AlipayActivity;
 import wizrole.materialdesign.nomal.NomalActivity;
 import wizrole.materialdesign.tablayout.TabLayoutActivity;
@@ -22,6 +23,13 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        findViewById(R.id.activity_to_top).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Main.this, ActivityToTop.class);
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.alipay).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

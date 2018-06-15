@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:id="@+id/lin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/bule"
+                />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="首页"
+                android:textSize="50px"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:background="@color/bule"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+        <wizrole.materialdesign.activityscrollViewtop.CustScrollView
+            android:id="@+id/scrollView"
+            android:layout_below="@id/lin_top"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:focusableInTouchMode="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="400px"
+                    android:src="@drawable/one"
+                    android:scaleType="centerCrop"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:text="我是可折叠的布局"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="#ffffff"
+                    />
+                <LinearLayout
+                    android:id="@+id/scroll_title_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/team_tab_detail" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <wizrole.materialdesign.activityscrollViewtop.CustListView
+                        android:id="@+id/list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:divider="@null" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </wizrole.materialdesign.activityscrollViewtop.CustScrollView>
+
+        <LinearLayout
+            android:id="@+id/scroll_title_one"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/lin_top"
+            android:orientation="vertical"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

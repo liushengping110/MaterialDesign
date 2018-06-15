@@ -17,15 +17,18 @@ public class TitleBar extends LinearLayout {
 	private ViewPager viewPager;
 	private LinearLayout ll_btn;
 	private LinearLayout ll_line;
+	private LinearLayout lin_after_text;
 	public int width;
 	public boolean status=false;//状态
-	public TitleBar(Context context, int count, ViewPager viewPager,LinearLayout ll_btn, LinearLayout ll_line) {
+	public TitleBar(Context context, int count, ViewPager viewPager,LinearLayout ll_btn, LinearLayout ll_line,LinearLayout lin_after_text ) {
 		super(context);
 		this.count=count;
 		this.context=context;
 		this.viewPager=viewPager;
 		this.ll_btn=ll_btn;
 		this.ll_line=ll_line;
+		this.lin_after_text=lin_after_text;
+
 	}
 
 	public View initLinear(){
@@ -41,11 +44,12 @@ public class TitleBar extends LinearLayout {
 			button.setLayoutParams(btn_lp);
 			button.setGravity(Gravity.CENTER);
 			if (i==0){
-				button.setText("刘胜平");
+				button.setText("商品列表");
 			}else{
-				button.setText("大帅哥");
+				button.setText("商家信息");
 			}
 			ll_btn.addView(button);
+
 			if (i==0) {
 				button.setTextColor(Color.RED);
 			}
@@ -58,6 +62,28 @@ public class TitleBar extends LinearLayout {
 			}
 			ll_line.addView(view);
 		}
+
+		//设置折叠后的布局
+		for (int i = 0; i < count; i++) {
+			CustTextView button=new CustTextView(context);
+			button.setLayoutParams(btn_lp);
+			button.setGravity(Gravity.CENTER);
+			if (i==0){//默认选中
+				button.setText("商品列表");
+				button.setBackgroundResource(R.drawable.tab_left_sel_bg);
+				button.setTextColor(Color.RED);
+			}else{
+				button.setText("商家信息");
+				button.setBackgroundResource(R.drawable.tab_right_no_sel);
+				button.setTextColor(Color.WHITE);
+			}
+			lin_after_text.addView(button);
+			if (i==0) {
+				button.setBackgroundResource(R.drawable.tab_left_sel_bg);
+				button.setTextColor(Color.RED);
+			}
+			button.setOnClickListener(new BtnClickListener(i));
+		}
 		return lineView;
 	}
 
@@ -69,7 +95,7 @@ public class TitleBar extends LinearLayout {
 		}
 		@Override
 		public void onClick(View v) {
-			changeBg(status,position);
+			changeBg(position);
 			viewPager.setCurrentItem(position);
 		}
 	}
@@ -79,35 +105,31 @@ public class TitleBar extends LinearLayout {
 	 *折叠前
 	 * 折叠后
 	 * 改变背景
-	 * @param stat
-	 * @param po
+	 * @param po 当前页面的下表
 	 */
-	public void changeBg(boolean stat,int po){
-		status=stat;
-		if(stat) {//折叠后
-			ll_line.setVisibility(View.GONE);
-			for (int i = 0; i < ll_btn.getChildCount(); i++) {
-				TextView button=(TextView)ll_btn.getChildAt(i);
+	public void changeBg(int po){
+			for (int i = 0; i < lin_after_text.getChildCount(); i++) {
+				TextView button=(TextView)lin_after_text.getChildAt(i);
 				if(i==0){//左边
+                    button.setText("商品列表");
 					if(i==po){//选中了左边
-						button.setBackground(getResources().getDrawable(R.drawable.tab_left_sel_bg));
+						button.setBackgroundResource(R.drawable.tab_left_sel_bg);
 						button.setTextColor(Color.RED);
 					}else{//没选中左边
-						button.setBackground(getResources().getDrawable(R.drawable.tab_left_no_sel));
+						button.setBackgroundResource(R.drawable.tab_left_no_sel);
 						button.setTextColor(Color.WHITE);
 					}
 				}else{//右边
+                    button.setText("商家信息");
 					if(i==po){//选中右边
-						button.setBackground(getResources().getDrawable(R.drawable.tab_right_sel_bg));
+						button.setBackgroundResource(R.drawable.tab_right_sel_bg);
 						button.setTextColor(Color.RED);
 					}else{//没选中右边
-						button.setBackground(getResources().getDrawable(R.drawable.tab_right_no_sel));
+						button.setBackgroundResource(R.drawable.tab_right_no_sel);
 						button.setTextColor(Color.WHITE);
 					}
 				}
 			}
-		}else{//折叠前
-			ll_line.setVisibility(View.VISIBLE);
 			for (int i = 0; i < ll_btn.getChildCount(); i++) {
 				TextView button=(TextView)ll_btn.getChildAt(i);
 				if (po==i){
@@ -115,8 +137,6 @@ public class TitleBar extends LinearLayout {
 				}else{
 					button.setTextColor(Color.BLACK);
 				}
-				button.setBackground(null);
-			}
 		}
 	}
 }

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -12,12 +12,11 @@
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="match_parent"
-                android:layout_margin="50px"
+                android:layout_margin="15dp"
                 android:layout_height="match_parent"
                 android:text="@string/msg"
                 />
         </android.support.v4.widget.NestedScrollView>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

@@ -11,6 +11,13 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/activity_to_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ScrollView在Activity中实现标题置顶"
+            />
+
+        <Button
             android:id="@+id/alipay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
