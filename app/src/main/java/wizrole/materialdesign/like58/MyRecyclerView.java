@@ -1,4 +1,4 @@
-package com.wubademo.customview;
+package wizrole.materialdesign.like58;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -7,7 +7,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
- * Created by zhengjingle on 2016/12/29.
+ * Created by 何人执笔？ on 2018/6/25.
+ * liushengping
  */
 
 public class MyRecyclerView extends RecyclerView {

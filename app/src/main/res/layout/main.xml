@@ -44,6 +44,13 @@
             android:text="TabLayout标题置顶"
             android:layout_marginTop="50px"
             />
+        <Button
+            android:id="@+id/like_58"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="仿58首页"
+            android:layout_marginTop="50px"
+            />
         <View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

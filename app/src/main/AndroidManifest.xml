@@ -24,5 +24,6 @@
         <activity android:name=".nomal.NomalActivity"/>
         <activity android:name=".title.TitleActivity"/>
         <activity android:name=".tablayout.TabLayoutActivity"/>
+        <activity android:name=".like58.Like58Activity"/>
     </application>
 </manifest>

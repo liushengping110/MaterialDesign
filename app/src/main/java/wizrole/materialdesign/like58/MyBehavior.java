@@ -1,4 +1,4 @@
-package com.wubademo.behavior;
+package wizrole.materialdesign.like58;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,12 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-import com.wubademo.com.util.Matrix;
-import com.wubademo.R;
-import com.wubademo.customview.MyRecyclerView;
+import wizrole.materialdesign.R;
+
 
 /**
- * Created by zhengjingle on 2016/12/29.
+ * Created by 何人执笔？ on 2018/6/25.
+ * liushengping
  */
 
 public class MyBehavior extends CoordinatorLayout.Behavior<View>{
