@@ -41,4 +41,10 @@
     <color name="text_fz_time">#999999</color> <!--辅助文字-->
     <color name="text_fz">#666666</color> <!--辅助文字-->
     <color name="text_zw">#333333</color> <!--辅助文字-->
+
+    <color name="colorPrimaryIcons">#FFFFFF</color>
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#727272</color>
+    <color name="divider">#B6B6B6</color>
 </resources>

@@ -20,4 +20,10 @@
 　　然而，在那片黑压压的树林里却并不那么宁静——野兔子和小松鼠、负鼠和金花鼠，它们都在那儿奔跳、欢笑；还有那田野里，那花园的荫影处，花草树木都在悄悄地生长。
 　　那些红的桃花，白的梨花，很快就会飘散零落，留下的将是初结的果实；那些野李子树也会长出滚圆的、像一盏盏灯笼似的野李子，野李子又酸又甜，都是因为太阳烤炙的，风雨吹打的；还有那青青的瓜藤，绽开着南瓜似的花朵，花朵里满是蜜糖，等待着早晨蜜蜂的来临，但是过不了多久，你看见的将是一条条甜瓜，而不再是这些花朵了。啊，在这无边无际的宁静中，生命——这种神秘的东西，它既摸不着，也听不见。只有大自然那无所不能，温柔</string>
 
+
+
+    <string name="behavior_contents">wizrole.materialdesign.likeUc.behavior.uc.UcNewsContentBehavior</string>
+    <string name="behavior_uc_header_pager">wizrole.materialdesign.likeUc.behavior.uc.UcNewsHeaderPagerBehavior</string>
+    <string name="behavior_uc_title">wizrole.materialdesign.likeUc.behavior.uc.UcNewsTitleBehavior</string>
+    <string name="behavior_uc_news_tab">wizrole.materialdesign.likeUc.behavior.uc.UcNewsTabBehavior</string>
 </resources>

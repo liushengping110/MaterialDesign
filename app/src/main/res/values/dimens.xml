@@ -13,4 +13,9 @@
 
     <dimen name="search_collapsed_right_margin">60dp</dimen>
     <dimen name="search_expanded_right_margin">20dp</dimen>
+
+    <dimen name="uc_news_header_title_height">45dip</dimen>
+    <dimen name="uc_news_header_title_init_offset">-45dip</dimen>
+    <dimen name="uc_news_header_pager_offset">-90dip</dimen>
+    <dimen name="uc_news_tabs_height">45dip</dimen>
 </resources>
